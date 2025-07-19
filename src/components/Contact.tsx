@@ -17,7 +17,7 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              Github
             </a></h1>
           <h1><a
               href="https://www.linkedin.com/in/raj-sharma8817/"
@@ -25,7 +25,7 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              Linkedin
             </a></h1>
           <h1><a
               href="https://x.com/code_with_raj_8"
@@ -33,7 +33,7 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter <MdArrowOutward />
+              Twitter
             </a></h1>
           <h1><a
               href="https://www.instagram.com/code_with_raj_8/"
@@ -41,7 +41,7 @@ const Contact = () => {
               data-cursor="disable"
               className="contact-social"
             >
-              Instagram <MdArrowOutward />
+              Instagram
             </a></h1>
         </div>
       </div>
