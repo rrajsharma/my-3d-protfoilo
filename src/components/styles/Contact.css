@@ -1,92 +1,157 @@
-.contact-section {
-  margin: auto;
-  padding-bottom: 100px;
-  margin-top: 100px;
+@font-face {
+  font-family: "gilroy";
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
 }
-.contact-section h3 {
-  font-size: 60px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
+.background-container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  bottom: 0;
 }
-.contact-flex {
+
+/* Background animated blur shapes */
+.background-blur {
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  filter: blur(70px);
+  background: linear-gradient(to top, #713c9d, #b075e1);
+}
+
+.blur-1 {
+  transform: rotate(30deg);
+  top: -10rem;
+  right: -24rem;
+  z-index: 10;
+  animation: updown0 5s linear infinite alternate;
+}
+
+.blur-2 {
+  transform: rotate(170deg);
+  top: -10rem;
+  right: 24rem;
+  background: linear-gradient(to top, #713c9d, #b075e1);
+  z-index: 0;
+  animation: updown1 5s linear infinite alternate-reverse;
+}
+
+/* Animations */
+@keyframes updown0 {
+  from {
+    transform: rotate(0deg) translate(-10%, 0);
+  }
+
+  to {
+    transform: rotate(30deg) translate(-10%, -15%);
+  }
+}
+
+@keyframes updown1 {
+  from {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(-10deg) translateY(10px);
+  }
+}
+
+/* Footer content */
+.footer-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 20px;
+  z-index: 20;
+  color: white;
+}
+
+.footer-heading {
+  font-family: gilroy;
+  font-weight: bold;
+  font-size: 14.5rem;
+  line-height: 0%;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid white;
+  margin: 10px 0;
+}
+
+.footer-links {
+  font-family: gilroy;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  flex-wrap: wrap;
 }
-.contact-flex h4 {
-  font-weight: 500;
-  margin: 0;
-  opacity: 0.6;
-}
-.contact-box {
-  display: flex;
-  flex-direction: column;
-}
-.contact-flex p {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-a.contact-social {
-  font-size: 25px;
-  border-bottom: 1px solid #ccc;
-}
-.contact-box h2 {
-  font-weight: 400;
-  font-size: 23px;
-  margin: 0;
-}
-.contact-box h2 > span {
-  color: var(--accentColor);
-}
-.contact-box h5 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 20px;
-  display: flex;
-  gap: 10px;
-  opacity: 0.5;
-}
-@media only screen and (max-width: 1600px) {
-  .contact-section h3 {
-    font-size: 50px;
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .background-container {
+    height: 70vh;
   }
-  .contact-box h2 {
-    font-size: 20px;
+  .background-blur {
+    height: 50vh;
+    width: 150%;
   }
-  a.contact-social {
-    font-size: 22px;
+
+  .blur-1 {
+    transform: rotate(30deg);
+    top: -10rem;
+    right: -9rem;
+    z-index: 10;
+    animation: updown0 5s linear infinite alternate;
+  }
+
+  .blur-2 {
+    transform: rotate(170deg);
+    top: -10rem;
+    right: 24rem;
+    background: linear-gradient(to top, #713c9d, #b075e1);
+    z-index: 0;
+    animation: updown1 5s linear infinite alternate-reverse;
+  }
+
+  .footer-heading {
+    font-size: 8rem;
   }
 }
-@media only screen and (max-width: 1300px) {
-  .contact-section h3 {
-    font-size: 40px;
+
+@media (max-width: 768px) {
+  .background-container {
+    height: 50vh;
   }
-  .contact-box h2 {
-    font-size: 18px;
+
+  .footer-heading {
+    font-size: 6rem;
+    margin-bottom: 30px;
   }
-  a.contact-social {
-    font-size: 20px;
-  }
-  .contact-flex p {
-    margin-top: 0px;
+
+  .footer-links {
+    gap: 10px;
+    text-align: center;
   }
 }
-@media only screen and (max-width: 900px) {
-  .contact-flex {
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 4rem;
+  }
+
+  .footer-content {
     flex-direction: column;
-    gap: 40px;
-  }
-  .contact-flex p {
-    margin-bottom: 0px;
-  }
-  .contact-flex h4 {
-    margin-top: 20px;
-  }
-  .contact-section {
-    margin-top: 50px;
-    padding-bottom: 50px;
-  }
-  .contact-container {
-    width: calc(100% - 25px);
+    padding: 0 10px;
+    margin-bottom: 10px;
   }
 }
