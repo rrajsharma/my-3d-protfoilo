@@ -75,6 +75,13 @@ body {
   margin: auto;
   position: relative;
 }
+
+.transparent-screen{
+  height: 100vh;
+  width: 100%;
+  background-color: #0000000f;
+}
+
 .container1 {
   width: var(--cWidth);
   height: var(--vh);

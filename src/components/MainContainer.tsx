@@ -48,6 +48,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
                 <TechStack />
               </Suspense>
             )}
+            <div className="transparent-screen"></div>
             <Contact />
           </div>
         </div>

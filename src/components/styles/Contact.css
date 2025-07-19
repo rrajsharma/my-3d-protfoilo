@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "gilroy";
+  src: url("src/assets/Gilroy-Regular.ttf") format("truetype");
+}
 .background-container {
   height: 100vh;
   width: 100%;
   background-color: black;
-  position: relative;
+  position: fixed;
   overflow: hidden;
+  z-index: 1;
+  bottom: 0;
 }
 
 /* Background animated blur shapes */
@@ -59,17 +65,18 @@
   width: 100%;
   bottom: 0;
   padding: 0 20px;
-  margin-bottom: 20px;
   z-index: 20;
   color: white;
 }
 
 .footer-heading {
+  font-family: gilroy;
+  font-weight: bold;
   font-size: 14.5rem;
-  line-height: 1;
+  line-height: 0%;
   text-align: center;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
 }
 
 .footer-divider {
@@ -79,10 +86,12 @@
 }
 
 .footer-links {
+  font-family: gilroy;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 0.6rem;
   font-weight: 600;
   flex-wrap: wrap;
 }
