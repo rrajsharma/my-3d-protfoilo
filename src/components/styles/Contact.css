@@ -1,6 +1,6 @@
 @font-face {
   font-family: "gilroy";
-  src: url("src/assets/Gilroy-Regular.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
 }
 .background-container {
   height: 100vh;
